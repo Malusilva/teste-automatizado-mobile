@@ -1,7 +1,11 @@
 describe('Primeiro teste', () => {
-    it('acessar o menu forms', async () => {
+    it('Acessar o menu forms', async () => {
         await $('~Forms').click()
-        await $('~test-input').setValue('test')
+        await $('~text-input').setValue('Teste Automatizado')
         expect(await $('~text-input')).toBeDisplayed()
+        await $('~Dropdown').click();
+        await seletor.SelectDrop()
+        await $('~button-Active').click()
+
     });
 });
